@@ -224,7 +224,7 @@
 
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <img class="img mx-5" src="img/logo/a.jpg" width="70%"
+                                            <img class="img mx-5" src="img/logo/a.jpeg" width="70%"
                                                 height="70%" alt="" srcset="">
                                         </div>
                                         <div class="col-md-10">
@@ -233,10 +233,19 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-8">
                                             <center>
                                                 <h4 class="text text-danger">Education Request Information</h4>
                                             </center>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
+                                            <script>
+                                                document.getElementById('downloadexcel').addEventListener('click', function () {
+                                                    var table2excel = new Table2Excel();
+                                                    table2excel.export(document.querySelectorAll("#table"));
+                                                });
+                                            </script>
                                         </div>
                                     </div>
                                     <table class="table table-responsive bg-light">
@@ -264,12 +273,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button onclick="display()">Click to Print</button>
-                                <script>
-                                    function display() {
-                                        window.print();
-                                    }
-                                </script>
+                                
                             </div>
                         </div>
 
