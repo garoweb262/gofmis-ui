@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Golfmis - Add Orphan</title>
+    <title>Golfmis - Orphans</title>
     <link rel="shortcut icon" href="img/logo/favicon.png" type="image/x-icon">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -178,7 +178,6 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal"
                                     data-target="#logoutModal">
@@ -194,10 +193,10 @@
                 <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Edit Orphan Information</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Orphans</h1>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">edit-Orphan</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">edit-orphan</li>
+                            <li class="breadcrumb-item"><a href="#">Orphans</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Orphans</li>
                         </ol>
                     </div>
 
@@ -206,91 +205,133 @@
                         <div class="col-xl-12 col-md-12 mb-4">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="row">
-                                            <div class="col-md-2">
-                                                <img class="img mx-5" src="img/logo/bluecountslogo3 (1).png" width="70%"
-                                                    height="70%" alt="" srcset="">
-                                            </div>
-                                            <div class="col-md-10">
-                                                <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
-                                                <P class="text text-center">motto: Gatan Marayu</P>
-                                                <p class="text text-center text-danger">Edit Orphan information form</p>
-                                            </div>
-                                        </div>
-
-                                        <form action="">
-                                            <div class="row px-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-group  mx-2 w-100">
-                                                        <label class="text-success" for="firstname">Name of
-                                                            Orphan</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Adress</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
+                                    <div class="row mb-3 align-items-center">
+                                        <a href="add-deceased.html"><button class="btn btn-success">Add
+                                                Deceased</button></a>
+                                        <form>
+                                            <div class="input-group mx-2 mt-3">
+                                                <input type="text" class="form-control bg-light border-1 small"
+                                                    placeholder="Search orphan" aria-label="Search"
+                                                    aria-describedby="basic-addon2" style="border-color: green;">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <div class="row  px-3">
-                                                <div class="col-md-3">
-                                                    <div class="form-group  mx-2 w-100">
-                                                        <label class="text-success" for="firstname">Orphan
-                                                            Photo</label>
-                                                        <input type="file" class="form-control-file">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group  mx-2 w-100">
-                                                        <label class="text-success" for="firstname">Name of
-                                                            Gardian</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Gardian Phone
-                                                            no</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Age</label>
-                                                        <input class="form-control" type="text" name="age" id="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-
-                                                <div class="col-md-6">
-                                                    <div class="form-group mx-2 my-0 w-100">
-                                                        <label class="text-success" for="firstname">Gender</label>
-                                                        <input class="checkbox mx-3" type="checkbox" name="male"
-                                                            id="">male
-                                                        <input class="checkbox mx-3" type="checkbox" name="female"
-                                                            id="">female
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-3"></div>
-                                                <div class="col-md-3"></div>
-                                                <div class="col-md-3">
-                                                    <input type="submit" class="btn  mb-3 btn-danger w-100" value="cancel">
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <input type="submit" class="btn  mb-3 btn-success w-100" value="save">
-                                                </div>
-                                            </div>
-                                            
+                                        </form>
                                     </div>
-                                    </form>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt=""
+                                                srcset="">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
+                                            <P class="text text-center">motto: Gatan Marayu</P>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <center>
+                                                <h4 class="text text-danger">Health Form</h4>
+                                            </center>
+                                        </div>
+                                        </div>
+                                    <div class="row">
+                                        <div class="form">
+                                            <form action="">
+                                                <div class="row px-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group  mx-2 w-100">
+                                                            <label class="text-success" for="firstname">Deceased ID</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group mx-2  w-100">
+                                                            <label class="text-success" for="firstname">Patient Name</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  px-3">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group  mx-2 w-100">
+                                                            <label class="text-success" for="firstname">Address</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group  mx-2 w-100">
+                                                            <label class="text-success" for="firstname">Gender</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group mx-2  w-100">
+                                                            <label class="text-success" for="firstname">Age</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-5 px-3">
+                                                    
+                                                    <div class="col-md-4">
+                                                        <input type="submit" class="btn  mb-3 btn-danger w-100" value="cancel ">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="submit" class="btn  mb-3 btn-warning w-100" value="save & print Lab form">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="submit" class="btn  mb-3 btn-success w-100" value="save & print prescrip form ">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <center>
+                                                <h4 class="text text-danger">Health Record</h4>
+                                            </center>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <i id="downloadexcel"
+                                                class="fas fa-file-download text-danger"><span>EXPORT</span></i>
+                                            <script>
+                                                document.getElementById('downloadexcel').addEventListener('click', function () {
+                                                    var table2excel = new Table2Excel();
+                                                    table2excel.export(document.querySelectorAll("#table"));
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <table id="table" class="table table-responsive bg-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Sn</th>
+                                                <th scope="col">Deceased Id</th>
+                                                <th scope="col">Patient Name</th>
+                                                <th scope="col">Gender</th>
+                                                <th scope="col">Age</th>
+                                                <th scope="col">Address</th>
+                                                <th scope="col">view Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="col">1</td>
+                                                <td scope="col">GOF/2020/0001</td>
+                                                <td scope="col">yusuf Kabiru</td>
+                                                <td scope="col">male</td>
+                                                <td scope="col">13</td>
+                                                <td scope="col">yalwawa</td>
+                                                <td scope="col"><a href="health-details.html"><i
+                                                            class="fas fa-eye mx-4 text-danger"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -306,6 +347,8 @@
                 </a>
 
                 <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/export/bootstrap-table-export.js"></script>
+                <script src="vendor/export/table2excel.js"></script>
                 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

@@ -1,0 +1,45 @@
+#health-form h4 {
+  font-size: 40px;
+  text-align: center;
+}
+#health-form h5 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+#health-form p {
+  font-size: 17px;
+  font-weight: 500;
+}
+#health-form .display-4 {
+  color: #000;
+  font-size: 24px;
+}
+#lastlines {
+  margin-top: 800px;
+}
+#lab-form h4 {
+  font-size: 40px;
+  text-align: center;
+}
+#lab-form h5 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+#lab-form p {
+  font-size: 17px;
+  font-weight: 500;
+}
+#lab-form .display-4 {
+  color: #000;
+  font-size: 24px;
+}
+#lab-form table {
+  margin-left: 800px;
+}
+#lastlines {
+  margin-top: 650px;
+}

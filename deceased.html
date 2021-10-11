@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Golfmis - Deceased</title>
+ <link rel="shortcut icon" href="img/logo/favicon.png" type="image/x-icon">
+
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/ruang-admin.css" rel="stylesheet">
@@ -221,7 +223,7 @@
 
                                             <div class="row">
                                                 <div class="col-md-2">
-                                                    <img class="img mx-5" src="img/logo/bluecountslogo3 (1).png" width="70%" height="70%" alt="" srcset="">
+                                                    <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
                                                 </div>
                                                 <div class="col-md-10">
                                                     <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
@@ -229,13 +231,22 @@
                                                 </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-10">
                                                         <center>
                                                         <h4 class="text text-danger">Deceaseds Information</h4>
                                                         </center>
                                                     </div>
+                                                    <div class="col-md-2">
+                                                        <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
+                                                      <script>
+                                                          document.getElementById('downloadexcel').addEventListener('click', function(){
+                                                               var table2excel = new Table2Excel();
+                                                              table2excel.export(document.querySelectorAll("#table"));
+                                                          });
+                                                      </script>  
+                                                    </div>
                                                 </div>
-                                        <table class="table table-responsive bg-light">
+                                        <table id="table" class="table table-responsive bg-light">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Sn</th>
@@ -276,6 +287,8 @@
                 </a>
 
                 <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/export/bootstrap-table-export.js"></script>
+                <script src="vendor/export/table2excel.js"></script>
                 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
