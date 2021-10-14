@@ -96,27 +96,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-1 small"
-                                            placeholder="What do you want to look for?" aria-label="Search"
-                                            aria-describedby="basic-addon2" style="border-color: green;">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
+                        
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -206,7 +186,6 @@
                         <div class="col-xl-12 col-md-12 mb-4">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <div class="row align-items-center">
                                         <div class="row">
                                             <div class="col-md-2">
                                                 <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
@@ -219,9 +198,7 @@
                                             </div>
                                         </div>
 
-                                        <div id="deceased">
-
-                                            <div class="container">
+                                        <div id="orphans-profile">
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <img class="img-fluid" src="img/a.jpg" alt="" srcset="">
@@ -237,47 +214,89 @@
                                                         <p class="display-5 mb-3"><span class="text text-danger">Age:</span> 12</p>
                                                         <p class="display-5 mb-3"><span class="text text-danger">Vulnerability:</span> middle</p>
                                                         <p class="display-5 mb-3"><span class="text text-danger">date
-                                                                registered:</span> 20/10/2022</p>
-                                                                <div>
-                                                                   <a class="link mb-4" href="edit-o-detail.html"><i class="fas fa-pen text-primary"></i>edit detail</a>
-                                                                    <a class="float-right" href="orphans.html">Go Back</a>
-                                                                </div>
-                                                        
-                                                        
-                                                        <a class="text mt-5 text-danger" href="orphan-id.html">Generate ID card</a>
-                                                        <a class="text mt-3 float-right text-primary" href="request.html">Request Something</a>
+                                                                registered:</span> 20/10/2022</p>       
                                                     </div>
-                                                 </div>
                                             </div>
-
+                                            
+                                        <div class="row mt-3">
+                                            <div class="col-md-3">
+                                                <a class="link text-success" href="">Generate ID card</a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="link text-danger" href="request.html"><i class="fas fa-plus text-danger"></i> New Request</a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="link text-info" href=""><i class="fas fa-pen"></i> Edit</a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="link text-danger  " href=""><i class="fas fa-arrow"></i> Go Back</a>
+                                            </div>
                                         </div>
 
-                                          <h4 class="text text-center text-danger">Request Information</h4>
-                                           <table class="table table-responsive bg-light">
-                                           <thead>
-                                              <tr>
-                                              <th scope="col">Sn</th>
-                                        <th scope="col">Deceased Id</th>
-                                         <th scope="col">Orphans Name</th>
-                                          <th scope="col">Zone</th>
-                                  <th scope="col">Request</th>
-                                 <th scope="col">description</th>
-                                 <th scope="col">date requested</th>
-                                          </tr>
-                                     </thead>
-                                        <tbody>
-                                       <tr>
-                                         <td scope="col">1</td>
-                                  <td scope="col">GOF/2020/0001</td>
-                                   <td scope="col">yusuf Kabiru</td>
-                                   <td scope="col">A</td>
-                               <td scope="col">books</td>
-                                       <td scope="col">notebooks</td>
-                               <td scope="col">20/10/1029</td>
-                                       </tr>
-                                     </tbody>
-                                           </table>   
+                                        <table id="table" class="table table-responsive bg-light mt-5">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Sn</th>
+                                                    <th scope="col">Items</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Date Request</th>
+                                                    <th scope="col">Approve (Y/N)</th>
+                                                    <th scope="col">view details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="col">1</td>
+                                                    <td scope="col">Note books</td>
+                                                    <td scope="col">6</td>
+                                                    <td scope="col">20/10/2021</td>
+                                                    <td scope="col">Y</td>
+                                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">2</td>
+                                                    <td scope="col">Note books</td>
+                                                    <td scope="col">6</td>
+                                                    <td scope="col">20/10/2021</td>
+                                                    <td scope="col">Y</td>
+                                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">3</td>
+                                                    <td scope="col">Note books</td>
+                                                    <td scope="col">6</td>
+                                                    <td scope="col">20/10/2021</td>
+                                                    <td scope="col">Y</td>
+                                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">4</td>
+                                                    <td scope="col">Note books</td>
+                                                    <td scope="col">6</td>
+                                                    <td scope="col">20/10/2021</td>
+                                                    <td scope="col">Y</td>
+                                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="col">5</td>
+                                                    <td scope="col">Note books</td>
+                                                    <td scope="col">6</td>
+                                                    <td scope="col">20/10/2021</td>
+                                                    <td scope="col">Y</td>
+                                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
 
+                                         
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+                                    
 
 
 

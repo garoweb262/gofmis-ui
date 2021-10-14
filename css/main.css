@@ -43,3 +43,30 @@
 #lastlines {
   margin-top: 650px;
 }
+#request .form-groupx {
+  margin-top: 40px;
+  margin-left: 0px;
+  width: 2rem;
+  height: 2rem;
+  background: green;
+  border-radius: 50px;
+}
+#request .form-groupx .fa-angle-right {
+  margin-top: 3px;
+  font-size: 27px;
+  margin-left: 10px;
+  color: #fff;
+}
+#request .group-form label {
+}
+@media (max-width: 458px) {
+  .fa-file-download {
+    margin-left: 105px;
+  }
+  #education .input-group {
+    margin-left: 0px;
+  }
+  #request .form-groupx {
+    margin-left: 120px;
+  }
+}

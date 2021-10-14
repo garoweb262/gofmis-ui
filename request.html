@@ -96,27 +96,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-1 small"
-                                            placeholder="What do you want to look for?" aria-label="Search"
-                                            aria-describedby="basic-addon2" style="border-color: green;">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
+                       
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -201,12 +181,12 @@
                         </ol>
                     </div>
 
-                    <div class="row mb-3">
-                        <!-- Decedents -->
-                        <div class="col-xl-12 col-md-12 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
+                    <div id="request">
+                        <div class="row mb-3">
+                            <!-- Decedents -->
+                            <div class="col-xl-12 col-md-12 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-2">
                                                 <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
@@ -216,61 +196,98 @@
                                                 <P class="text text-center">motto: Gatan Marayu</P>
                                                 <p class="text text-center text-danger">Request form</p>
                                             </div>
-                                        </div>
-
-                                        <form action="">
-                                            <div class="row px-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-group  mx-2 w-100">
-                                                        <label class="text-success" for="firstname">Name of
-                                                           Orphan</label>
-                                                        <input type="text" class="form-control">
+                                        </div>                       
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-lg-10 col-md-6 col-xs-6">
+                                                        <div class="form-group">
+                                                            <label class="text-success" for="orphan-id">Orphan ID</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-6 col-xs-6">
+                                                        <div class="form-groupx">
+                                                        <i class="fas fa-angle-right text-center" data-toggle="modal"
+                    data-target="#exampleModalScrollable" id="#modalScroll"></i>
+                                                          
+                                                            
+                                                        </div>
+                                                            </div>
+                                                </div>
+                                                   
+                                            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title text-success" id="exampleModalScrollableTitle">Request Form</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <img class="img-fluid mt-2" src="img/a.jpg" alt="" srcset="">
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="body-text mt-5">
+                                                                        <p class="display-5 mb-3"><span class="text text-success">Name:</span> yusuf aliyu</p>
+                                                                        <p class="display-5 mb-3"><span class="text text-success">Orphan ID:</span> GOF/20/002</p>
+                                                                        <p class="display-5 mb-3"><span class="text text-success">Adress:</span> yalwawa garko
+                                                                        </p>
+                                                                        <p class="display-5 mb-3"><span class="text text-success">Age:</span> 12</p>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="group-form mx-1">
+                                                                            <label class="text text-success" for="type">Request Type</label>
+                                                                            <select name="" class="form-control" id="">
+                                                                                <option value="">Type</option>
+                                                                                <option value="Education">Education</option>
+                                                                                <option value="Education">Health</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="group-form mx-1">
+                                                                        <label class="text text-success" for="type">item needed</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="group-form mx-1">
+                                                                        <label class="text text-success" for="type">quantity</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="group-form mx-1">
+                                                                        <label class="text text-success" for="type">date</label>
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <input type="button" class="btn btn-success w-100 mt-2" value="Send">
+                                                                </div>
+                                                               
+                                                                
+                                                            
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Deceased ID</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row  px-3">
-                                                <div class="col-md-4">
-                                                    <div class="form-group  mx-2 w-100">
-                                                        <label class="text-success" for="firstname">Zone</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Item request</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group mx-2  w-100">
-                                                        <label class="text-success" for="firstname">Description</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                           
-                                            <div class="row">
-                                                <div class="col-md-3"></div>
-                                                <div class="col-md-3"></div>
-                                                <div class="col-md-3">
-                                                    <input type="submit" class="btn btn-danger w-100" value="cancel">
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <input type="submit" class="btn btn-success w-100" value="save">
                                                 </div>
                                             </div>
                                     </div>
-                                    </form>
                                 </div>
                             </div>
-                        </div>
+                    </div>
 
 
                         <!-- Footer -->

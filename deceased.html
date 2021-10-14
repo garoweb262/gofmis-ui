@@ -96,27 +96,6 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-1 small"
-                                            placeholder="What do you want to look for?" aria-label="Search"
-                                            aria-describedby="basic-addon2" style="border-color: green;">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -201,16 +180,20 @@
                         </ol>
                     </div>
 
-                    <div class="row mb-3">
-                        <!-- Decedents -->
-                        <div class="col-xl-12 col-md-12 mb-4">
-                            <div class="card h-100 w-100">
-                                <div class="card-body">
-                                    <div class="row mb-3 align-items-center">
-                                                  <a href="add-deceased.html"><button class="btn btn-success">Add Deceased</button></a>
+                   <div id="deceased">
+                        <div class="row mb-3">
+                            <!-- Decedents -->
+                            <div class="col-xl-12 col-md-12 mb-4">
+                                <div class="card h-100 w-100">
+                                    <div class="card-body">
+                                        <div class="row mb-5">
+                                            <div class="col-md-4">
+                                                <a href="add-deceased.html"><button class="btn btn-success btnn mt-3 w-100"><i class="fas fa-plus"></i> Add Deceased</button></a>
+                                            </div>
+                                            <div class="col-md-8">
                                                 <form>
-                                                    <div class="input-group mx-2 mt-3">
-                                                        <input type="text" class="form-control bg-light border-1 small" placeholder="Search deceased"
+                                                    <div class="input-group mt-3">
+                                                        <input type="text" class="form-control bg-light border-1 small" placeholder="Search Deceased"
                                                             aria-label="Search" aria-describedby="basic-addon2" style="border-color: green;">
                                                         <div class="input-group-append">
                                                             <button class="btn btn-success" type="button">
@@ -219,33 +202,34 @@
                                                         </div>
                                                     </div>
                                                 </form>
-                                                </div>
-
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
-                                                </div>
-                                                <div class="col-md-10">
-                                                    <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
-                                                    <P class="text text-center">motto: Gatan Marayu</P>
-                                                </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-10">
-                                                        <center>
-                                                        <h4 class="text text-danger">Deceaseds Information</h4>
-                                                        </center>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
-                                                      <script>
-                                                          document.getElementById('downloadexcel').addEventListener('click', function(){
-                                                               var table2excel = new Table2Excel();
-                                                              table2excel.export(document.querySelectorAll("#table"));
-                                                          });
-                                                      </script>  
-                                                    </div>
-                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
+                                                <P class="text text-center">motto: Gatan Marayu</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <center>
+                                                    <h4 class="text text-danger">Deceaseds Information</h4>
+                                                </center>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
+                                                <script>
+                                                    document.getElementById('downloadexcel').addEventListener('click', function () {
+                                                        var table2excel = new Table2Excel();
+                                                        table2excel.export(document.querySelectorAll("#table"));
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
                                         <table id="table" class="table table-responsive bg-light">
                                             <thead>
                                                 <tr>
@@ -268,12 +252,18 @@
                                                     <td scope="col">3</td>
                                                     <td scope="col">2</td>
                                                     <td scope="col"><a href="view-d-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
-                                                <td scope="col"><a href="edit-d-detail.html"<i class="fas fa-pen text-primary"></i></a></td>
+                                                    <td scope="col"><a href="edit-d-detail.html" <i class="fas fa-pen text-primary"></i></a>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
                                 </div>
-                            </div>
+                   </div>
+
+
+
+
                         </div>
                         
                        

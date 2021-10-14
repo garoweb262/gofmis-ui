@@ -198,86 +198,146 @@
                             <li class="breadcrumb-item active" aria-current="page">Orphans</li>
                         </ol>
                     </div>
-
-                    <div class="row mb-3">
-                        <!-- Decedents -->
-                        <div class="col-xl-12 col-md-12 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <div class="row mb-3 align-items-center">
-                                        <a href="add-deceased.html"><button class="btn btn-success">Add Orphan</button></a>
-                                        <form>
-                                            <div class="input-group mx-2 mt-3">
-                                                <input type="text" class="form-control bg-light border-1 small" placeholder="Search orphan"
-                                                    aria-label="Search" aria-describedby="basic-addon2" style="border-color: green;">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-success" type="button">
-                                                        <i class="fas fa-search fa-sm"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
-                                        </div>
-                                        <div class="col-md-10">
-                                            <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
-                                            <P class="text text-center">motto: Gatan Marayu</P>
+                    <div id="orphans-table">
+                        <div class="row mb-5">
+                            <div class="col-md-4">
+                                <button class="btn btn-success btnn mt-3 w-100"><i class="fas fa-plus"></i>  Add Orphan</button>
+                            </div>
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="input-group mt-3">
+                                        <input type="text" class="form-control bg-light border-1 small" placeholder="Search Request record"
+                                            aria-label="Search" aria-describedby="basic-addon2" style="border-color: green;">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-success" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <center>
-                                                <h4 class="text text-danger">Orphans Information</h4>
-                                            </center>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
-                                            <script>
-                                                document.getElementById('downloadexcel').addEventListener('click', function () {
-                                                    var table2excel = new Table2Excel();
-                                                    table2excel.export(document.querySelectorAll("#table"));
-                                                });
-                                            </script>
-                                        </div>
-                                    </div>
-                                    <table id="table" class="table table-responsive bg-light">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Sn</th>
-                                                <th scope="col">Orphan Id</th>
-                                                <th scope="col">Orphan Name</th>
-                                                <th scope="col">Gender</th>
-                                                <th scope="col">Age</th>
-                                                <th scope="col">V status</th>
-                                                <th scope="col">Gardian Name</th>
-                                                <th scope="col">Gardian phone</th>
-                                                <th scope="col">view profile</th>
-                                                <th scope="col">edit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td scope="col">1</td>
-                                                <td scope="col">GOF/2020/0001</td>
-                                                <td scope="col">yusuf Kabiru</td>
-                                                <td scope="col">male</td>
-                                                <td scope="col">13</td>
-                                                <td scope="col">Highly vulnerable</td>
-                                                <td scope="col">rabiu Anas</td>
-                                                <td scope="col">09087654321</td>
-                                                <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
-                                                <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                </form>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="img mx-5" src="img/logo/a.jpeg" width="70%" height="70%" alt="" srcset="">
+                            </div>
+                            <div class="col-md-10">
+                                <h3 class="header-text text-center">GARKO ORPHANS FOUNDATION (GOF)</h3>
+                                <P class="text text-center">motto: Gatan Marayu</P>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <center>
+                                    <h4 class="text text-danger">Orphans Information</h4>
+                                </center>
+                            </div>
+                            <div class="col-md-2">
+                                <i id="downloadexcel" class="fas fa-file-download text-danger"><span>EXPORT</span></i>
+                                <script>
+                                    document.getElementById('downloadexcel').addEventListener('click', function () {
+                                        var table2excel = new Table2Excel();
+                                        table2excel.export(document.querySelectorAll("#table"));
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <table id="table" class="table table-responsive bg-light">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sn</th>
+                                    <th scope="col">Orphan Id</th>
+                                    <th scope="col">Orphan Name</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">V status</th>
+                                    <th scope="col">Gardian Name</th>
+                                    <th scope="col">Gardian phone</th>
+                                    <th scope="col">view profile</th>
+                                    <th scope="col">edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">1</td>
+                                    <td scope="col">GOF/2020/0001</td>
+                                    <td scope="col">yusuf Kabiru</td>
+                                    <td scope="col">male</td>
+                                    <td scope="col">13</td>
+                                    <td scope="col">Highly vulnerable</td>
+                                    <td scope="col">rabiu Anas</td>
+                                    <td scope="col">09087654321</td>
+                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                    <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">2</td>
+                                    <td scope="col">GOF/2020/0001</td>
+                                    <td scope="col">yusuf Kabiru</td>
+                                    <td scope="col">male</td>
+                                    <td scope="col">13</td>
+                                    <td scope="col">Highly vulnerable</td>
+                                    <td scope="col">rabiu Anas</td>
+                                    <td scope="col">09087654321</td>
+                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                    <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">3</td>
+                                    <td scope="col">GOF/2020/0001</td>
+                                    <td scope="col">yusuf Kabiru</td>
+                                    <td scope="col">male</td>
+                                    <td scope="col">13</td>
+                                    <td scope="col">Highly vulnerable</td>
+                                    <td scope="col">rabiu Anas</td>
+                                    <td scope="col">09087654321</td>
+                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                    <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">4</td>
+                                    <td scope="col">GOF/2020/0001</td>
+                                    <td scope="col">yusuf Kabiru</td>
+                                    <td scope="col">male</td>
+                                    <td scope="col">13</td>
+                                    <td scope="col">Highly vulnerable</td>
+                                    <td scope="col">rabiu Anas</td>
+                                    <td scope="col">09087654321</td>
+                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                    <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">5</td>
+                                    <td scope="col">GOF/2020/0001</td>
+                                    <td scope="col">yusuf Kabiru</td>
+                                    <td scope="col">male</td>
+                                    <td scope="col">13</td>
+                                    <td scope="col">Highly vulnerable</td>
+                                    <td scope="col">rabiu Anas</td>
+                                    <td scope="col">09087654321</td>
+                                    <td scope="col"><a href="view-o-detail.html"><i class="fas fa-eye text-danger"></i></a></td>
+                                    <td scope="col"><a href="edit-o-detail.html" <i class="fas fa-pen text-primary"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        </div>
+                    </div>
+
+                    
 
 
+
+
+
+
+
+
+
+
+
+
+                        </div>
                         <!-- Footer -->
                     </div>
                 </div>
